@@ -18,3 +18,8 @@ phases:
     commands:
       - echo Push Docker image to ECR
       - docker push 998105437962.dkr.ecr.us-east-1.amazonaws.com/brain-tasks-app:latest
+      - echo Update kubeconfig for EKS cluster
+      - aws eks update-kubeconfig --region us-east-1 --name brain-tasks-cluster
+      - echo Deploy to EKS
+      - kubectl apply -f deployment.yaml
+      - kubectl apply -f service.yaml
