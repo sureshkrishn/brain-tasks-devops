@@ -89,3 +89,43 @@ No dependencies are required
 No build process is required
 
 No package.json is needed
+
+==========================================================================================================================
+
+                                              Application Deployment
+	                    	(Deploy the given React application to a production ready state)
+
+Application:
+Clone the below mentioned repository and deploy the application (Run application in port 3000).
+Repo URL : https://github.com/Vennilavanguvi/Brain-Tasks-App.git
+
+Docker:
+Dockerize the application by creating Dockerfile
+Build an application and check output using docker image.
+
+Registry:
+Create an AWS ECR or Dockerhub repository for storing docker images.
+
+Kubernetes:
+Setup Kubernetes in AWS EKS and Confirm EKS cluster is running.
+Write deployment and service YAML files.
+Deploy using kubectl via CodeBuild or Codepipeline.
+
+CodeBuild:
+Create a CodeBuild project:
+Source: Connect to your repository
+Environment: Use managed image (Amazon Linux, Ubuntu)
+Write and define commands in buildspec.yml.
+
+Version Control:
+Push the codebase to a Git provider (GitHub).
+Use CLI commands to push code.
+
+CodePipeline:
+Source: GitHub
+Build: AWS CodeBuild project
+Deploy: Deploy to EKS via Codepipeline EKS deploy stage..
+
+Monitoring:
+Use CloudWatch Logs to track build, deploy, and application logs.
+
